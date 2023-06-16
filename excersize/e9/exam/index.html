@@ -1,0 +1,40 @@
+<html>
+	<body>
+		<button id="btn1"> show file contents </button>
+        
+        <div id="content"></div>
+        
+        <script>
+			
+			document.getElementById("btn1").addEventListener("click", showContent)
+			
+		
+			function showContent(){
+				
+
+				const a = new XMLHttpRequest();
+				
+				a.open("GET", "http://localhost:8080/myname.txt");
+				
+				a.onload = abc;
+				
+				a.send();
+				
+			}
+			
+			
+			function abc() {
+					
+				if(this.status == 200){ 
+				 
+					var response = this.responseText;
+					
+					document.getElementById("content").innerHTML = response;
+					
+				} 		
+				
+			}	
+			
+		</script>
+	</body>
+</html>

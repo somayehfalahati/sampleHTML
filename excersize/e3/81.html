@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" >
+<title>Javascript</title>
+<script type="text/javascript">
+	function second(n1 , Op , n2){
+		var number1 = parseInt(n1);
+		var number2 = parseInt(n2);
+		var operator = 	Op;	
+		if ( operator == "+" ){
+			var result = number1 + number2;
+			var out = result * 2;
+			alert(out);
+		}
+		if ( operator == "-" ){
+			alert(number1 - number2);
+		}
+		if ( operator == "*" ){
+			alert(number1 * number2);
+		}
+		if ( operator == "/" ){
+			alert(number1 / number2);
+		}
+		
+	}
+	
+	
+</script>
+</head>
+
+<body>
+
+    <p onClick="second('20','-','40');">Check Numbers</p>
+
+</body>
+</html>
